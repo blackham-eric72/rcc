@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({extended:false}));
 //set static path
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/images',express.static(path.join(__dirname, 'public/RCC/images')));
+app.use('/script',express.static(path.join(__dirname, 'public/RCC/script')));
+app.use('/style',express.static(path.join(__dirname, 'public/RCC/style')));
+
 app.get('/', function(req, res){
     res.render('index');
 });
