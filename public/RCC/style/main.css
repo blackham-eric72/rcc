@@ -1,0 +1,468 @@
+body, html {
+height: 100%;
+margin:0;
+font-size:16px;
+font-family: "lato", sans-serif;
+line-height: 1.8em;
+color:#667;
+}
+body{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+.pimg1, .pimg2, .pimg3 {
+    position:relative;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:100%;
+    background-attachment: fixed;
+}
+.pimg1{
+    background-attachment:scroll;
+    display:flex;
+    background-image: url('../images/redCarpetBackground.png');
+    min-height: 100%;
+    background-size:cover;
+    position:relative;
+    background-position:center;
+    justify-content: center;
+}
+.pimg2{
+    /* background-image:url('images/redCarpetBackground.png'); */
+    min-height:400px;
+
+}
+.pimg3{
+    /* background-image:url('images/redCarpetBackground.png'); */
+    min-height:400px;
+
+}
+.section{
+    text-align: center;
+    padding: 50px 0;
+    margin:auto;
+}
+.section-dark{
+    background-color: rgb(168, 11, 11);
+    color:white;
+}
+.bannerContainer{
+    position:absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    background-color:rgba(231, 16, 16, 0.61);
+    padding: 30px 0;
+}
+
+.ptext{
+    max-width: 400px;
+    min-width:200px;
+    margin:auto;
+    color:white;
+    font-size:1.75em;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.75em;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    border-top: 2px solid white;
+    border-bottom:2px solid white;
+}
+.bannerText{
+    color:white;
+    font-size:1.2em;
+    margin:30px auto;
+    text-transform: uppercase;
+
+}
+.bannerTextSchedule{
+    color:white;
+    font-size:1.2em;
+    margin:30px auto;
+    max-width:80%;
+    
+
+}
+.btn{
+    margin:auto;
+    text-decoration:none;
+    display:inline-block;
+    text-transform:uppercase;
+    padding: 10px;
+    font-size: .75em;
+    letter-spacing: 4px;
+    border-radius:5px;
+}
+.btn-main{
+    background-color:rgb(247, 97, 97);
+color:rgb(247, 216, 216);
+    border:none;
+    transition: .2s;
+}
+
+.btn-main:hover{
+background-color:white;
+color:rgb(247, 216, 216);
+
+}
+.visible{
+    display:flex;
+}
+.invisible{
+    display:none;
+}
+
+/* Side Navigation */
+.sideMenu{
+    height:100%;
+    position:fixed;
+    width:0;
+    z-index:2;
+    background-color:rgba(0, 0, 0, 0.842);
+    transition: .6s;
+}
+.hamburgerMenu{
+    display:flex;
+    line-height: 0;
+    align-content: center;
+    transition:.9s;
+    z-index: 100;
+    width: 200px;
+    height:20px;
+    position: absolute;
+    left:10px;
+    top:10px;
+    cursor: pointer;
+}
+#menuText{
+    color:white;
+    padding-left:10px;
+
+}
+
+.hamLine{
+    display:block;
+    width:20px;
+    height:5px;
+    margin:2.5px 0;
+    background-color:white;
+    transition:1.5s ease-out;
+}
+#navtwo{
+    transition:1s;
+}
+#navtwo.close{
+width:0;
+height: 0;
+}
+#navone.close{
+transform: translateY(8px) rotate(45deg);
+}
+#navthree.close{
+    transform: rotate(-45deg) ;
+
+}
+.side-nav{
+    margin-top:30px;
+    width:0;
+    overflow-x: hidden;
+    padding-top:60px;
+    margin:auto;
+}
+.side-nav-link{
+    padding: 10px 0;
+    display:block;
+    text-decoration:none;
+    color:transparent;
+    transition:1.5s;
+    text-align:center;
+    margin:auto;
+}
+.side-nav-link:hover {
+    color:gray !important;
+
+}
+
+.hidden{
+    display:none;
+}
+
+
+/*   Main Navigation   */
+
+
+
+.navbar{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color:rgba(77, 75, 75, 0.541);
+    height: 50px;
+    transition:1s;
+    
+}
+.sticky-menu{
+    background-color:rgba(77, 75, 75);
+}
+.main-nav{
+    align-self: center;
+    height: 50px;
+    display:none;
+}
+.nav-ul{
+    
+    align-self:center;
+    display:flex;
+    list-style:none;
+    padding: 0 10px;
+    margin:none;
+   
+}
+
+.nav-link{
+    padding:10px;
+    width: 100%;
+    cursor: pointer;
+    text-decoration:none;
+    color:white;
+    transition:.2s;
+    border-bottom:1px solid transparent;
+    border-top:1px solid transparent;
+}
+/* .nav-link:hover {
+    border-bottom:1px solid white;
+    border-top: 1px solid white;
+} */
+.nav-link:after{
+    content: '';
+    display: block;
+    border-bottom:3px solid white;
+    position: relative;
+    margin-left:10px;
+    width:10px;
+    transition: .75s ease-out;
+
+}
+.nav-link:hover:after{
+    width:90%;
+}
+.lMore{
+    display:inline-block;
+    align-self: flex-end;
+    margin:0 auto;
+    margin-bottom:50px;
+    color:white;
+    text-decoration:none;
+    text-transform: uppercase;
+    
+}
+.lMore::after{
+    content:'';
+    background-image: url("../images/arrow.svg");
+    display:block;
+    width:1.5em;
+    height: 1.5em;
+    position:relative;
+    background-size:contain;
+    background-position:center; 
+    margin:0 auto;
+    margin-top:10px;
+}
+
+.lMore:hover::after{
+    animation: hoverArrow .5s infinite alternate;
+}
+@keyframes hoverArrow{
+    from{ transform: none;}
+    to {transform: translateY(20px);}
+
+}
+
+#fiveStarImg{
+    max-height: 100px;
+}
+section h2 {
+    font-size: 2.5em;
+    line-height: 2em;
+}
+
+.fbPosts{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1250px;
+    margin:auto;
+}
+.fb{
+    margin:10px;
+}
+
+/* TEAM PROFILE  */
+.ourteam{
+    max-width: 1100px;
+    margin:auto;
+}
+.profileContainter{
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: space-evenly;
+    margin:auto;
+    width:95%;
+    padding: 10px 0;
+    
+}
+.profilePic{
+    max-width:50%;
+    max-height: 50%;
+    margin:auto;
+    padding: 10px;
+    
+}
+.profileText{
+    display:flex;
+    flex-direction:column;
+    width:80%;
+    border-bottom:1px solid white;
+    margin:auto;
+    
+}
+.profileText h3, .profileText p{
+    margin:0;
+    text-align: left;
+}
+.profileText p{
+    text-align:left;
+}
+.profileText h3 {
+    border-top:1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+@media screen and (min-width: 600px){
+
+    .pimg1{
+        background-attachment: fixed;
+        display:flex;
+        background-image: url('../images/redCarpetBackground.png');
+        min-height: 100%;
+        background-size:cover;
+        position:relative;
+        background-position:center;
+        justify-content: center;
+    }
+    .bannerContainer{
+        position:absolute;
+        top: 30%;
+        text-align: center;
+        width: 100%;
+        background-color:rgba(231, 16, 16, 0.61);
+        padding: 30px 0;
+    }
+    .fbPosts{
+        width:100%;
+        flex-direction:row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .fb{
+        margin:15px;
+    }
+    .hamburgerMenu{
+        display:none;   
+    }
+    .main-nav{
+        display:block;
+    }
+    .profilePic{
+        max-width:20%;
+        max-height: 20%;
+        
+        padding: 10px;
+    }
+    .profile{
+        flex-direction:row;
+    }
+}
+.scheduleHome{
+   min-height: 100%;
+   position:relative;
+   background-size:100%;
+   background-color:darkred;
+   display:flex;
+   flex-direction: column;
+}
+.scheduleBanner{
+    margin: 75px auto 0 auto;
+    background-color:transparent;
+}
+#calendar{
+    width:80%;
+    height:50vh;
+    margin:-10px auto 10px auto;
+    background-color:white;
+    /* border:1px solid black; */
+    display:flex;
+    flex-flow:column;
+    box-shadow: 0px 0px 20px rgb(85, 76, 76);
+
+}
+.monthHead{
+    width:100%;
+    background-color:white;
+    text-align:center;
+    font-size: 1.2em;
+    color:darkred;
+    padding:10px 0 ;
+}
+.weekDays{
+    width:100%;
+    /* border:2px solid rgb(167, 164, 164); */
+    display:flex;
+    justify-content: space-evenly;
+    background-color:darkred;
+}
+.weekday{
+    width: 14%;
+    /* border:1px solid red; */
+    background-color: darkred;
+    text-align:center;
+    color:white;
+}
+.days{
+    width:100%;
+    height:100%;
+    text-align: center;
+    display:flex;
+    flex-flow:column;
+}
+.row{
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: space-evenly;
+}
+.day{
+    width: 14%;
+    border:1px solid rgb(221, 215, 215);
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.day:hover{
+    background-color:darkred;
+    color:white;
+    font-size:1.5em;
+    
+}
