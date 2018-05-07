@@ -19,12 +19,13 @@ app.use('/script',express.static(path.join(__dirname, 'public/RCC/script')));
 app.use('/style',express.static(path.join(__dirname, 'public/RCC/style')));
 
 app.get('/', function(req, res){
-    res.render('index');
+    res.render('rccHome');
 });
 
 app.get('/rcc', function(req, res){
     res.render('rccHome');
 })
+
 app.get('/rcc/residentialSchedule', function(req, res){
     res.render('residentialSchedule');
 })

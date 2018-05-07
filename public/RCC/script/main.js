@@ -108,21 +108,33 @@ function createCalendar(){
     var j = 1;
     for(i=startDay; i <= lastDay + 1; i++){
         daysList[i].innerHTML = j;
-        daysList[i].setAttribute('onclick', 'doIt(' + j + ')');
+        daysList[i].setAttribute('onclick', 'doIt(' + j + ', ' + "'"+ months[month] + "'" + ', ' + "'"+ year + "'" +')');
         j++;
     }
-
-    // addListeners();
-
-
-// function addListeners(){
-//     var daysList = document.getElementsByClassName('day')
-
-//     for(i=0; i < daysList.length; i++){
-//         if(daysList[i].innerHTML != null)
-//     }
 }
 
-function doIt(date){
-    alert(date);
+function doIt(day, month, year){
+    var timeDiv = document.getElementById('dailySchedule');
+    var timeSlots = document.getElementsByClassName('hour');
+    var scheduleDate = document.getElementById('scheduleDate');
+
+    scheduleDate.innerHTML = month + ", " + day + " " + year ;
+
+    // here, some code will interact with the database and retrieve available times
+/*
+connect with database
+search for available time slots according to day and month
+return available time slots
+compare available time slots with all time slots, 
+loop through time slots. if time slot is available, add class 'available'.
+*/
+    timeDiv.style.width = "300px";
+    timeDiv.style.height = "auto";
+    
+    var top
+    
+    scrollTo(timeDiv.offSetLeft, timeDiv.offsetTop - 75);
+
+    // timeDiv.scrollIntoView(true);
+
 }
