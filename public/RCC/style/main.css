@@ -20,7 +20,7 @@ body{
 .pimg1{
     background-attachment:scroll;
     display:flex;
-    background-image: url('../images/redCarpetBackground.png');
+    background-image: url('../images/redCarpetBackgroundSmall.jpg');
     min-height: 100%;
     background-size:cover;
     position:relative;
@@ -48,7 +48,7 @@ body{
 }
 .bannerContainer{
     position:absolute;
-    top: 20%;
+    top: 10%;
     text-align: center;
     width: 100%;
     background-color:rgba(231, 16, 16, 0.61);
@@ -189,10 +189,7 @@ transform: translateY(8px) rotate(45deg);
 }
 
 
-/*   Main Navigation   */
-
-
-
+/* ***************  Main Navigation **************  */
 .navbar{
     display:flex;
     width:100%;
@@ -202,7 +199,6 @@ transform: translateY(8px) rotate(45deg);
     background-color:rgba(77, 75, 75, 0.541);
     height: 50px;
     transition:1s;
-    
 }
 .sticky-menu{
     background-color:rgba(77, 75, 75);
@@ -219,11 +215,18 @@ transform: translateY(8px) rotate(45deg);
     list-style:none;
     padding: 0 10px;
     margin:none;
-   
 }
-
+.wayFinder{
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top:2px solid white;
+    height: 32px;
+}
+.nav-item{
+    padding:0;  
+}
 .nav-link{
-    padding:10px;
+    padding: 0 10px;
     width: 100%;
     cursor: pointer;
     text-decoration:none;
@@ -247,10 +250,11 @@ transform: translateY(8px) rotate(45deg);
 
 }
 .nav-link:hover:after{
-    width:90%;
+    width:70%;
 }
+
 .lMore{
-    display:inline-block;
+    display:none;
     align-self: flex-end;
     margin:0 auto;
     margin-bottom:50px;
@@ -347,53 +351,6 @@ section h2 {
     border-bottom: 1px solid white;
 }
 
-
-@media screen and (min-width: 600px){
-
-    .pimg1{
-        background-attachment: fixed;
-        display:flex;
-        background-image: url('../images/redCarpetBackground.png');
-        min-height: 100%;
-        background-size:cover;
-        position:relative;
-        background-position:center;
-        justify-content: center;
-    }
-    .bannerContainer{
-        position:absolute;
-        top: 30%;
-        text-align: center;
-        width: 100%;
-        background-color:rgba(231, 16, 16, 0.61);
-        padding: 30px 0;
-    }
-    .fbPosts{
-        width:100%;
-        flex-direction:row;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .fb{
-        margin:15px;
-    }
-    .hamburgerMenu{
-        display:none;   
-    }
-    .main-nav{
-        display:block;
-    }
-    .profilePic{
-        max-width:20%;
-        max-height: 20%;
-        
-        padding: 10px;
-    }
-    .profile{
-        flex-direction:row;
-    }
-}
 .scheduleHome{
    min-height: 100%;
    position:relative;
@@ -405,6 +362,10 @@ section h2 {
 .scheduleBanner{
     margin: 75px auto 0 auto;
     background-color:transparent;
+}
+.calendar-container{
+    display:flex;
+    flex-direction:column;
 }
 #calendar{
     width:80%;
@@ -591,4 +552,76 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
     max-width:800px
+}
+
+
+/* ************************************************************* */
+/* ************************************************************* */
+/* ********     LARGE SCREENS    ******************************* */
+/* ************************************************************* */
+/* ************************************************************* */
+@media screen and (min-width: 600px){
+
+    .pimg1{
+        background-attachment: fixed;
+        display:flex;
+        background-image: url('../images/redCarpetBackgroundMedium.png');
+        min-height: 100%;
+        background-size:cover;
+        position:relative;
+        background-position:center;
+        justify-content: center;
+    }
+    .bannerContainer{
+        position:absolute;
+        top: 30%;
+        text-align: center;
+        width: 100%;
+        background-color:rgba(231, 16, 16, 0.61);
+        padding: 30px 0;
+    }
+    .lMore{
+        display:inline-block;
+    }
+    .fbPosts{
+        width:100%;
+        flex-direction:row;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .fb{
+        margin:15px;
+    }
+    .hamburgerMenu{
+        display:none;   
+    }
+    .main-nav{
+        display:block;
+    }
+    .profilePic{
+        max-width:20%;
+        max-height: 20%;
+        
+        padding: 10px;
+    }
+    .profile{
+        flex-direction:row;
+    }
+     #calendar{
+        margin:-10px auto 10px auto;
+     }
+    .calendar-container{
+        flex-direction:row;
+
+    }
+    .dailySchedule{
+        margin:-10px 10px 10px 10px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .pimg1{
+        background-image: url('../images/redCarpetBackground.png');
+    }
 }

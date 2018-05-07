@@ -7,39 +7,13 @@
     <link rel="stylesheet" href="../style/main.css">
     <title>Red Carpet Cleaning</title>
 </head>
-<body onload="createCalendar()">
+<body class="body" id="schedule" onload="createCalendar()">
   
 
     <div class="navbar" id="navbar">
         <p class="placeholder"></p>
-        
-        <nav class="main-nav">
-            <ul class = "nav-ul">
-                <li class="nav-item"><a href="../rcc" class="nav-link"> Home</a></li>
-                <li class="nav-item"><a href="../rcc/residentialSchedule" class="nav-link">Schedule An Appointment</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Our Services</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Our Team</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div id="sideMenu" class="sideMenu">
-            <div id="hamburgerMenu" class="hamburgerMenu" onclick="openSideMenu()">
-                <div id="lines">
-                    <span class="hamLine" id="navone"></span>
-                    <span class="hamLine" id="navtwo"></span>
-                    <span class="hamLine" id="navthree"></span>
-                </div>
-                    <p id="menuText">Menu</p>
-                </div>
-                
-                <div id="side-nav" class="side-nav">
-                        <a href="../rcc" class="side-nav-link"> Home</a>
-                        <a href="../rcc/residentialSchedule.ejs" class="side-nav-link">Schedule An Appointment</a>
-                        <a href="#" class="side-nav-link">Our Services</a>
-                        <a href="#" class="side-nav-link">Our Team</a>
-                </div>
-           
-        </div>  
+    
+        <% include partials/navigation %>
     
      <div class="scheduleHome">
         <div class="scheduleBanner">
@@ -50,6 +24,7 @@
                *Choose an available time slot, and fill out how many bedrooms you would like us to clean for you. We will send you an email with an automatic quote. 
             </div>
         </div>
+        <div class="calendar-container">
         <div id="calendar">
             <div id ="month" class="monthHead">
                
@@ -125,6 +100,7 @@
             <div class="timeSlot booked"><p class="hour">4:00pm</p></div>
         </div>
     </div>
+</div>
 
 
     <section class="section section-light" id="one">
@@ -205,27 +181,8 @@
                     </form>
                   </div> 
     </section>
-    <!-- <div class="pimg2">
-            <div class="ptext">
-                <div class="border">
-                    Image 2 text
-                </div>
-            </div>
-        </div> -->
-        <section class="section section-dark">
-                <h2>Section 2</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Quia esse facere asperiores laborum porro nobis voluptas, 
-                    blanditiis sint magni illo!
-                </p>
-
-                <div class="pimg3">
-                        <div class="ptext">
-                            <div class="border">
-                                Image 2 text
-                            </div>
-                        </div>
-                    </div>
+   
+                    <% include partials/footer %>
 </body>
 <script src="../script/main.js"></script>               
 

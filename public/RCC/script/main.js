@@ -9,7 +9,7 @@ window.onscroll = function() {myFunction()};
 
 // get section 1 
 var section = document.getElementById('one');
-var stickyPoint = section.offsetTop;
+var stickyPoint = section.offsetTop -10;
 console.log(stickyPoint);
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
@@ -22,6 +22,7 @@ function myFunction() {
 } 
 
 function openSideMenu(){
+
     var sideMenu = document.getElementById('sideMenu');
     var sideNav = document.getElementById('side-nav');
     var links = document.getElementsByClassName('side-nav-link');
@@ -117,6 +118,9 @@ function doIt(day, month, year){
     var timeDiv = document.getElementById('dailySchedule');
     var timeSlots = document.getElementsByClassName('hour');
     var scheduleDate = document.getElementById('scheduleDate');
+    var calendar = document.getElementById('calendar');
+
+    calendar.style.marginLeft = "10px";
 
     scheduleDate.innerHTML = month + ", " + day + " " + year ;
 
@@ -137,4 +141,19 @@ loop through time slots. if time slot is available, add class 'available'.
 
     // timeDiv.scrollIntoView(true);
 
+}
+
+
+wayFinder();
+// This function will determine what page you are on, and highlight the appropriate navigation link
+function wayFinder(){
+    var bodies = document.getElementsByClassName('body');
+    var links = document.getElementsByClassName('nav-link');
+    console.log(location.pathname)
+console.log('this is running');
+if(bodies[0].id == 'home'){
+    document.getElementById('nav-home').classList.add('wayFinder');
+}else if(bodies[0].id == 'schedule') {
+    document.getElementById('nav-schedule').classList.add('wayFinder');
+}
 }
