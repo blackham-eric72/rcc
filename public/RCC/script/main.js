@@ -155,5 +155,7 @@ if(bodies[0].id == 'home'){
     document.getElementById('nav-home').classList.add('wayFinder');
 }else if(bodies[0].id == 'schedule') {
     document.getElementById('nav-schedule').classList.add('wayFinder');
+}else if(bodies[0].id == 'services'){
+    document.getElementById('nav-services').classList.add('wayFinder');
 }
 }

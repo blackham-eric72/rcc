@@ -190,6 +190,7 @@ transform: translateY(8px) rotate(45deg);
 
 
 /* ***************  Main Navigation **************  */
+
 .navbar{
     display:flex;
     width:100%;
@@ -202,6 +203,18 @@ transform: translateY(8px) rotate(45deg);
 }
 .sticky-menu{
     background-color:rgba(77, 75, 75);
+}
+.placeholder{
+    color:white;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+
+}
+.fb img{
+    width:25px;
+    height:25px;
 }
 .main-nav{
     align-self: center;
@@ -310,25 +323,26 @@ section h2 {
     max-width: 1100px;
     margin:auto;
 }
-.profileContainter{
+.profileContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
 }
 .profile{
     display:flex;
     flex-direction:column;
     align-content: center;
     justify-content: space-evenly;
-    margin:auto;
-    width:95%;
+    margin:20px auto;
+    width:80%;
     padding: 10px 0;
-    
+    border:1px solid white;
 }
 .profilePic{
-    max-width:50%;
-    max-height: 50%;
-    margin:auto;
-    padding: 10px;
+        border-radius: 50%;
+        max-width:50%;
+        max-height: 50%;
+        padding: 10px;
+        margin:10px auto;
     
 }
 .profileText{
@@ -336,15 +350,17 @@ section h2 {
     flex-direction:column;
     width:80%;
     border-bottom:1px solid white;
-    margin:auto;
+    margin:5px auto;
+    min-height:80%:
     
 }
 .profileText h3, .profileText p{
     margin:0;
-    text-align: left;
+
 }
 .profileText p{
-    text-align:left;
+    min-height:80%;
+  
 }
 .profileText h3 {
     border-top:1px solid white;
@@ -500,6 +516,25 @@ footer{
    
   margin:auto;
 }
+.phone, .email{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.phoneText{
+    color:white;
+    margin:0;
+}
+#phone-icon{
+    width:25px;
+    height:25px;
+    margin-right:20px;
+}
+#email-icon{
+    width:25px;
+    height:25px;
+    margin-right:20px;
+}
 
 /*************************** SCHEDULE PAGE FORM*****************/
 
@@ -572,6 +607,11 @@ input[type=submit]:hover {
         background-position:center;
         justify-content: center;
     }
+    .placeholder{
+        width:25%;
+        justify-content: flex-start;
+        padding-left:30px;
+    }
     .bannerContainer{
         position:absolute;
         top: 30%;
@@ -599,14 +639,18 @@ input[type=submit]:hover {
     .main-nav{
         display:block;
     }
-    .profilePic{
-        max-width:20%;
-        max-height: 20%;
-        
-        padding: 10px;
+    .profileContainer{
+        display: flex;
+        flex-direction: row;
     }
+    .profilePic{
+        max-width:80%;
+        max-height: 80%;
+    }
+
     .profile{
-        flex-direction:row;
+       
+        min-height:500px;   
     }
      #calendar{
         margin:-10px auto 10px auto;

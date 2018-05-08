@@ -29,6 +29,9 @@ app.get('/rcc', function(req, res){
 app.get('/rcc/residentialSchedule', function(req, res){
     res.render('residentialSchedule');
 })
+app.get('/rcc/services', function(req, res){
+    res.render('services');
+})
 var PORT = 80
 app.listen(PORT, function(){
     console.log('server listening on Port ' + PORT);
